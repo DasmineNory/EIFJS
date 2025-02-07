@@ -217,21 +217,29 @@ body {
   text-transform: uppercase;
   color: #faf0e6;
   width: max-content;
+  white-space: nowrap;
   animation: marqueeScroll 10s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  flex-wrap: nowrap;
 }
 
 /* Marquee Icons */
 .marquee img {
-  height: 40px;
+  height: 50px;
 }
 
-/* Marquee Animation */
 @keyframes marqueeScroll {
   from {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
