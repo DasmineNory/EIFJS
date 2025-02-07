@@ -1,15 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
+  function startMarquee() {
+    const marqueeContent = document.querySelector(".marquee-content");
+
+    marqueeContent.innerHTML += marqueeContent.innerHTML;
+
+    gsap.to(".marquee-content", {
+      x: "-50%",
+      duration: 10,
+      ease: "linear",
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.wrap(["0%", "-50%"]),
+      },
+    });
+  }
+
+  startMarquee();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
   const copyBtn = document.querySelector(".copy-btn");
-  if (copyBtn) {
+  const contractInput = document.querySelector(".contract-address");
+
+  if (copyBtn && contractInput) {
     copyBtn.addEventListener("click", function () {
-      const contractAddress = document
-        .querySelector(".contract-address")
-        .textContent.trim();
-      navigator.clipboard.writeText(contractAddress).then(() => {
-        console.log("Copied: " + contractAddress);
-      });
+      let contractText = contractInput.value.replace(/^CA:\s*/, ""); // Remove "CA:" from the value
+
+      navigator.clipboard
+        .writeText(contractText)
+        .then(() => {
+          console.log("Copied: " + contractText);
+          copyBtn.textContent = "Copied!";
+          setTimeout(() => {
+            copyBtn.textContent = "COPY";
+          }, 2000);
+        })
+        .catch((err) => {
+          console.error("Copy failed:", err);
+        });
 
       // GSAP Click Animation
       gsap.to(".copy-btn", {
@@ -19,12 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
         repeat: 1,
         ease: "power1.inOut",
       });
-
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => {
-        copyBtn.textContent = "COPY";
-      }, 2000);
     });
+  } else {
+    console.error("Copy button or contract address input not found.");
   }
 
   // Navbar Animation
@@ -59,14 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "power2.out",
   });
 
-  // Marquee Animation
-  gsap.to(".marquee", {
-    x: "-100%",
-    duration: 10,
-    repeat: -1,
-    ease: "linear",
-  });
-
   // Tokenomics Card Animation
   gsap.from(".tokenomics-card", {
     opacity: 0,
@@ -81,11 +102,11 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Join community button logic
+  // Join Community Button Logic
   const joinButton = document.querySelector(".join-btn");
   if (joinButton) {
     joinButton.addEventListener("click", function () {
-      window.location.href = "https://t.me/BaseNutsCommunity";
+      window.location.href = "";
     });
   }
 });
