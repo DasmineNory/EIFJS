@@ -1,0 +1,608 @@
+/* Import Greek-inspired font */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap");
+
+body {
+  background-color: #faf0e6;
+  color: #b22222;
+  font-family: "Cinzel", serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #c41e3a;
+  border-radius: 15px;
+  margin: 10px auto;
+  margin-top: 70px;
+  max-width: 75%;
+  box-shadow: 4px 4px 0px black;
+}
+
+.navbar .brand-name {
+  color: #faf0e6;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+  max-height: 40px;
+}
+
+.brand-name {
+  color: #faf0e6;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-container {
+  display: flex;
+  gap: 5px;
+  margin-right: 13px;
+}
+.icon-container a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.icon-container img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.icon-container img:hover {
+  transform: scale(1.2);
+}
+.nav-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #faf0e6;
+  padding: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px black;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+
+.join-btn {
+  background-color: #c41e3a;
+  color: #faf0e6;
+  border: none;
+  padding: 10px 15px;
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px black;
+  transition: background 0.2s ease-in-out;
+}
+
+.join-btn:hover,
+.copy-btn:hover {
+  background-color: #b22222;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.hero-content {
+  text-align: left;
+  color: white;
+  margin-left: 50px;
+}
+
+.hero-content h1,
+.hero-content h2 {
+  font-size: 48px;
+  margin: 5px 0;
+  color: #c41e3a;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.highlight-box {
+  background-color: #c41e3a;
+  color: #faf0e6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px black;
+  display: inline-block;
+  transform: rotate(-5deg);
+}
+
+.contract-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 5px 5px 0px black;
+  margin-top: 20px;
+}
+
+.contract-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.contract-address {
+  border: none;
+  background: none;
+  font-size: 18px;
+  flex: 1;
+  outline: none;
+}
+
+.copy-btn {
+  background-color: #c41e3a;
+  color: #faf0e6;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Cinzel", serif;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px black;
+}
+
+.copy-btn:hover {
+  background-color: #b22222;
+}
+
+.hero-image img {
+  max-width: 400px;
+  margin-right: 50px;
+}
+
+/* Marquee Section */
+.marquee-section {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #c41e3a;
+  padding: 10px 0;
+  box-shadow: 5px 5px 0px black;
+  position: relative;
+  width: 100%;
+  color: #faf0e6;
+}
+
+/* Marquee Content */
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #faf0e6;
+  width: max-content;
+  animation: marqueeScroll 10s linear infinite;
+}
+
+/* Marquee Icons */
+.marquee img {
+  height: 40px;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Tokenomics Section */
+.tokenomics-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #c41e3a;
+  color: #faf0e6;
+}
+
+.tokenomics-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Layout for Image + Cards */
+.tokenomics-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Image Section */
+.tokenomics-image img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* Tokenomics Card */
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Individual Boxes */
+.tokenomics-card {
+  background-color: #b22222;
+  color: #faf0e6;
+  padding: 20px;
+  width: 280px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px black;
+}
+
+/* Subtitle */
+.tokenomics-subtitle {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #faf0e6;
+  margin-bottom: 5px;
+}
+
+/* Main Values */
+.tokenomics-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: yellow;
+}
+
+/* Mobile (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    max-width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .nav-icon {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .hero-content h1,
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-image img {
+    max-width: 350px;
+  }
+
+  .tokenomics-section {
+    padding: 40px 15px;
+  }
+
+  .tokenomics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .tokenomics-card {
+    width: 230px;
+    height: 130px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    max-width: 95%;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .nav-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .join-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-content {
+    margin-left: 0;
+  }
+
+  .hero-content h1,
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .hero-image img {
+    max-width: 280px;
+  }
+
+  .hero-image {
+    width: 40%;
+    text-align: right;
+  }
+
+  .contract-container {
+    padding: 10px;
+    width: 90%;
+  }
+  .marquee-section {
+    height: 30px;
+    padding: 5px 0;
+  }
+
+  .marquee {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee img {
+    width: 18px;
+    height: auto;
+  }
+
+  /* Tokenomics Section */
+  .tokenomics-section {
+    padding: 40px 15px;
+  }
+
+  .tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tokenomics-card {
+    padding: 15px;
+    text-align: center;
+    width: 95%;
+    max-width: 250px;
+    height: auto;
+  }
+}
+
+/* Small Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav-logo {
+    width: 30px;
+    height: auto;
+  }
+
+  .brand-name {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .icon-container {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .nav-icon {
+    width: 28px;
+  }
+
+  .join-btn {
+    display: block;
+    font-size: 12px;
+    padding: 4px 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-content {
+    width: 55%;
+  }
+
+  .hero-content h1 {
+    font-size: 18px;
+  }
+
+  .hero-content h2 {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    width: 40%;
+    text-align: right;
+  }
+
+  .hero-image img {
+    max-width: 180px;
+  }
+
+  /* Contract Address */
+  .contract-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px;
+  }
+
+  .contract-address {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  .copy-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .marquee-section {
+    height: 30px;
+    padding: 5px 0;
+  }
+
+  .marquee {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee img {
+    width: 18px;
+    height: auto;
+  }
+
+  /* Tokenomics Section */
+  .tokenomics-section {
+    padding: 20px 5px;
+  }
+
+  .tokenomics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .tokenomics-card {
+    width: 140px;
+    height: 100px;
+    padding: 10px;
+    font-size: 11px;
+    padding: 10px;
+    font-size: 11px;
+    width: 140px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tokenomics-subtitle {
+    position: absolute;
+    top: 5px;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tokenomics-value {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+}
